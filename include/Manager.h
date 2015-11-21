@@ -15,8 +15,8 @@ using namespace std;
 
 class Manager {
 	private:
-		list<Movie*>* movies;
-		list<Expert*>* experts;
+		list<Movie*> movies;
+		list<Expert*> experts;
 	public:
 		/***********
 		 * Manager - constructor
@@ -151,6 +151,8 @@ class Manager {
 		* pros list
 		***************/
 		void removePro();
-	};
+		const list<Expert*>& getExperts() const;
+		const list<Movie*>& getMovies() const;
+};
 
 #endif /* MANAGER_H_ */

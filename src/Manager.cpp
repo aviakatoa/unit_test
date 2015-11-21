@@ -9,8 +9,6 @@
 
 
 		Manager::Manager() {
-			this->experts= new list<Expert*>();
-			this->movies= new list<Movie*>();
 
 		}
 
@@ -62,6 +60,12 @@
 		}
 		void Manager::removePro(){
 
-		}
+}
 
+const list<Expert*>& Manager::getExperts() const {
+	return experts;
+}
 
+const list<Movie*>& Manager::getMovies() const {
+	return movies;
+}

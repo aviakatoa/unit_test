@@ -7,10 +7,17 @@
 
 #include "../include/Movie.h"
 #include<iostream>
+
+Movie::Movie() {
+	std::cout<<"Movie Dflt Ctor"<<std::endl;
+
+}
+
+
 Movie::Movie(string code, string name, double length, int year, int rate, string b){
 	// TODO Auto-generated constructor stub
 
-	std::cout<<"Movie Ctor called"<<std::endl;
+	std::cout<<"Movie Ctor "<<std::endl;
 
 	this->brief= b;
 	this->code=code;

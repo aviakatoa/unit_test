@@ -6,7 +6,7 @@
  */
 
 # include "gtest/gtest.h"
-#include "../include/Movie.h"
+#include "Movie.h"
 
 using namespace std;
 
@@ -24,9 +24,9 @@ protected:
 
 	}
 public:
-	MovieTests(){
-		this->m1= Movie("code1", "first", 60.5, 1995,5,"boring");
-		this->m2= Movie("code2", "second", 120, 2000, 2, "very good");
+	MovieTests() : m1("code1", "first", 60.5, 1995,5,"boring"),
+				   m2("code2", "second", 120, 2000, 2, "very good") {
+		std::cout<<"MovieTests Ctor called"<<std::endl;
 	}
 };
 

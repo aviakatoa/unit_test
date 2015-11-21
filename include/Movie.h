@@ -25,7 +25,11 @@ class Movie {
 		list<string>* genres;
 		list<Expert*>* Experts;
 		Comperator* comperator;
+
+
 	public:
+
+		Movie();
 		/*************
 		 * Movie- constructor
 		 */
