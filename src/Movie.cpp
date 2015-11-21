@@ -8,11 +8,6 @@
 #include "../include/Movie.h"
 #include<iostream>
 
-Movie::Movie() {
-	std::cout<<"Movie Dflt Ctor"<<std::endl;
-
-}
-
 
 Movie::Movie(string code, string name, double length, int year, int rate, string b){
 	// TODO Auto-generated constructor stub
@@ -41,7 +36,7 @@ void Movie::addGenre(string genre){
 }
 
 int Movie::getGenresNum(){
-	return this->genres->size();
+	return this->genres.size();
 }
 
 void Movie::addExpert(const Expert* newPro){
@@ -67,6 +62,36 @@ double Movie::getLength(){
 	return this->length;
 }
 
-list<Expert*>* Movie::getPros(){
+list<Expert*> Movie::getPros(){
 	return this->Experts;
+}
+
+list<string> Movie::getGenres(){
+	return this->genres;
+}
+
+string Movie::getBrief(){
+	return this->brief;
+}
+
+string Movie::getName(){
+	return this->name;
+}
+
+/***********
+ * getYear
+ *
+ * the method returns the year
+ */
+int Movie::getYear(){
+	return this->year;
+}
+
+/**********
+ * getRate
+ *
+ * the method returns the rate of the movie
+ */
+int Movie::getRate(){
+	return this->rate;
 }

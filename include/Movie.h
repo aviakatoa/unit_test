@@ -22,22 +22,23 @@ class Movie {
 		int year;
 		int rate;
 		string brief;
-		list<string>* genres;
-		list<Expert*>* Experts;
+		list<string> genres;
+		list<Expert*> Experts;
 		Comperator* comperator;
 
 
 	public:
 
-		Movie();
 		/*************
 		 * Movie- constructor
 		 */
 		Movie(string code, string name, double length, int year, int rate, string brief);
+
 		/*************
 		 * Movie- destructor
 		 */
 		~Movie();
+
 		/**************
 		* addGenre
 		*
@@ -112,9 +113,42 @@ class Movie {
 		 *
 		 * the function returns the pros list
 		 */
-		list<Expert*>* getPros();
+		list<Expert*> getPros();
 
+		/*************
+		 * getGenres
+		 *
+		 * the method returns the genres list
+		 */
+		list<string> getGenres();
 
+		/***********
+		 * getBrief
+		 *
+		 * the method returns the brief of the movie
+		 */
+		string getBrief();
+
+		/**********
+		 * getName
+		 *
+		 * the method return the name of the movie
+		 */
+		string getName();
+
+		/***********
+		 * getYear
+		 *
+		 * the method returns the year
+		 */
+		int getYear();
+
+		/**********
+		 * getRate
+		 *
+		 * the method returns the rate of the movie
+		 */
+		int getRate();
 };
 
 #endif /* MOVIE_H_ */
