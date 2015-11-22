@@ -16,7 +16,7 @@ class Actor: public Expert {
 public:
 	Actor(string name, int age, string jobDesc, int ID, Gender gender);
 	virtual ~Actor();
-	void toString();
+	string toString();
 };
 
 #endif /* ACTOR_H_ */

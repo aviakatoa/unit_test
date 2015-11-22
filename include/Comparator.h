@@ -11,11 +11,11 @@ using namespace std;
 #include "Expert.h"
 #include<list>
 
-class Comperator {
+class Comparator {
 public:
-	Comperator();
-	virtual ~Comperator();
-	virtual int compare( Expert& first, Expert& second);
+	Comparator();
+	virtual ~Comparator();
+	virtual int compare( const Expert* first, const Expert* second);
 };
 
 #endif /* COMPERATOR_H_ */

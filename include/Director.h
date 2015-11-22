@@ -16,7 +16,7 @@ class Director: public Expert {
 public:
 	Director(string name, int age, string jobDesc, int ID, Gender gender);
 	virtual ~Director();
-	void toString();
+	string toString();
 };
 
 #endif /* DIRECTOR_H_ */

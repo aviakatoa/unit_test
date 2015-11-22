@@ -21,7 +21,7 @@ protected:
 	Movie m2;
 
 	virtual void SetUp(){
-		this->e1->hired(&m1);
+
 	}
 	virtual void TearDown(){
 		delete(this->e1);
@@ -39,6 +39,8 @@ TEST_F(ExpertTests, AddingMovie){
 	int prevNum= this->e1->getNumOfMovies();
 	this->e1->hired(&m2);
 	EXPECT_EQ(this->e1->getNumOfMovies(), prevNum+1);
+	bool found = (std::find(e1->getMoviesList().begin(), e1->getMoviesList().end(), m2) != e1->getMoviesList().end());
+	EXPECT_EQ(found, true);
 }
 
 TEST_F(ExpertTests, DeletingMyself){
@@ -54,6 +56,7 @@ TEST_F(ExpertTests, DeletingMyself){
 }
 
 TEST_F(ExpertTests, DeletingMovie){
+	this->e1->hired(&m1);
 	int num= this->e1->getNumOfMovies();
 	int numOfExperts= this->m1.getPros().size();
 	this->e1->fired("code");

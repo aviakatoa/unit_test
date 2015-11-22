@@ -8,10 +8,10 @@
 #ifndef COMPAREBYAGE_H_
 #define COMPAREBYAGE_H_
 
-#include "Comperator.h"
 #include<list>
+#include "Comparator.h"
 
-class CompareByAge: public Comperator {
+class CompareByAge: public Comparator {
 public:
 	CompareByAge();
 	virtual ~CompareByAge();

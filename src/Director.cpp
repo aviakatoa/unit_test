@@ -17,7 +17,7 @@ Director::~Director() {
 	// TODO Auto-generated destructor stub
 }
 
-void Director::toString(){
-
+string Director::toString(){
+	return "";
 }
 

@@ -16,6 +16,6 @@ Screenwriter::~Screenwriter() {
 	// TODO Auto-generated destructor stub
 }
 
-void Screenwriter::toString(){
-
+string Screenwriter::toString(){
+	return "";
 }

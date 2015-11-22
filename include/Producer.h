@@ -15,7 +15,7 @@ class Producer: public Expert {
 public:
 	Producer(string name, int age, string jobDesc, int ID, Gender gender);
 	virtual ~Producer();
-	void toString();
+	string toString();
 };
 
 #endif /* PRODUCER_H_ */

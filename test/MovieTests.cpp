@@ -6,7 +6,9 @@
  */
 
 # include "gtest/gtest.h"
-#include "Movie.h"
+#include "../include/Movie.h"
+#include "Expert.h"
+#include "Producer.h"
 #include<algorithm>
 
 using namespace std;
@@ -15,40 +17,41 @@ class MovieTests :public::testing::Test{
 protected:
 	Movie m1;
 	Movie m2;
-	Movie m3;
 	Expert* e;
 	Expert* e2;
 
 	virtual void SetUp(){
-		m3=m1+m2;
+
 	}
 
 	virtual void TearDown(){
-		delete(e);
-		delete(e2);
+
 	}
 public:
 	MovieTests() : m1("code1", "first", 60.5, 1995,5,"boring"),
 				   m2("code2", "second", 120, 2000, 2, "very good"){
-		this->e = new Producer("someone", 40, "producer", 123456, male);
-		this->e2 = new Producer("somebody", 35, "producer2", 123456789, female);
-		m1.addExpert(e);
-		m1.addExpert(e2);
+		this->e = new Producer("someone", 40, "producer", 45678, male);
+		this->e2 = new Producer("somebody", 35, "producer2", 1234, female);
+	}
+
+	~MovieTests(){
+		delete(e);
+		delete(e2);
 	}
 };
 
 TEST_F(MovieTests, AddingGenre){
-	int prev= m1.getGenresNum();
 	m1.addGenre("Drama");
 	m1.addGenre("Thrill");
 	bool found = (std::find(m1.getGenres().begin(), m1.getGenres().end(), "Drama") != m1.getGenres().end());
 	ASSERT_EQ(found, true);
-	EXPECT_NE(prev+2, m1.getGenresNum());
+	EXPECT_NE(2, m1.getGenresNum());
 }
 
 TEST_F(MovieTests, AddingExpert){
 	int num= m1.getPros().size();
-	EXPECT_EQ(num, 2);
+	EXPECT_EQ(num, 0);
+	m1.addExpert(e);
 	bool found = (std::find(m1.getPros().begin(), m1.getPros().end(), e) != m1.getPros().end());
 	EXPECT_EQ(found, true);
 }
@@ -83,5 +86,8 @@ TEST_F(MovieTests, RemovingProGoodArgs){
 }
 
 TEST_F(MovieTests, SortTesting){
-
+	Movie m= Movie("default", "default", 40, 1950, 78, "default");
+	m.addExpert(this->e);
+	m.addExpert(this->e2);
+	EXPECT_EQ(m.getPros().front()->getID(), e2->getID());
 }

@@ -20,9 +20,9 @@ Movie::Movie(string code, string name, double length, int year, int rate, string
 	this->name= name;
 	this->rate=rate;
 	this->year=year;
-	this->genres= new list<string>();
-	this->comperator= new Comperator();
-	this->Experts= new list<Expert*>();
+	this->genres= list<string>();
+	this->comparator= new Comparator();
+	this->Experts= list<Expert*>();
 
 }
 
@@ -42,8 +42,8 @@ int Movie::getGenresNum(){
 void Movie::addExpert(const Expert* newPro){
 
 }
-void Movie::setSort(Comperator* comperator){
-	this->comperator=comperator;
+void Movie::setSort(Comparator* comparator){
+	this->comparator=comparator;
 }
 void Movie::printPros(){
 

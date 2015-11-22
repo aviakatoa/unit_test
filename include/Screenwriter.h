@@ -15,7 +15,7 @@ class Screenwriter: public Expert {
 public:
 	Screenwriter(string name, int age, string jobDesc, int ID, Gender gender);
 	virtual ~Screenwriter();
-	void toString();
+	string toString();
 };
 
 #endif /* SCREENWRITER_H_ */

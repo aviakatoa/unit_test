@@ -8,10 +8,10 @@
 #ifndef COMPAREBYMOVIES_H_
 #define COMPAREBYMOVIES_H_
 
-#include "Comperator.h"
 #include<list>
+#include "Comparator.h"
 
-class CompareByMovies: public Comperator {
+class CompareByMovies: public Comparator {
 public:
 	CompareByMovies();
 	virtual ~CompareByMovies();

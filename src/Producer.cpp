@@ -16,7 +16,7 @@ Producer::~Producer() {
 	// TODO Auto-generated destructor stub
 }
 
-void Producer::toString(){
-
+string Producer::toString(){
+	return "";
 }
 

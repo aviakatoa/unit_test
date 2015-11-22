@@ -22,12 +22,11 @@ protected:
 
 	}
 	virtual void TearDown(){
-
+		delete(expert);
 	}
 
 public:
 	ManagerTesting(){
-		this->manager = Manager();
 		this->expert = new Actor("Danny", 24, "main actor", 11223344, female);
 	}
 };
@@ -44,6 +43,12 @@ TEST_F(ManagerTesting, CreatingMovie){
 	this->manager.createMovie();
 	int currentNum= this->manager.getMovies().size();
 	ASSERT_EQ(prevNum+1, currentNum);
+}
+
+TEST_F(ManagerTesting, RemovingPro){
+	int numOfPros= this->manager.getExperts().size();
+	this->manager.removePro();
+	EXPECT_NE(numOfPros, manager.getExperts().size());
 }
 
 

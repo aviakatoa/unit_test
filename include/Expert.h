@@ -20,7 +20,7 @@ class Expert {
 		int ID;
 		Gender gender;
 		int numOfMovies;
-		list<Movie*>* moviesRelated;
+		list<Movie*> moviesRelated;
 	protected:
 		string name;
 		int age;
@@ -28,13 +28,13 @@ class Expert {
 	public:
 		Expert(string name, int age, string jobDesc, int ID, Gender gender);
 		virtual ~Expert();
-		virtual void toString()=0;
+		virtual string toString()=0;
 		int getID();
 		int getNumOfMovies();
 		void removeMeFromAllMovies();
 		void fired(string movieCode);
 		void hired(Movie* movie);
-		list<Movie*>* getMoviesList();
+		list<Movie*> getMoviesList();
 };
 
 #endif /* EXPERT_H_ */

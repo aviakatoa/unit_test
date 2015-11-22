@@ -38,7 +38,7 @@ void Expert::fired(string movieCode){
 void Expert::hired(Movie* movie){
 
 }
-list<Movie*>* Expert::getMoviesList(){
+list<Movie*> Expert::getMoviesList(){
 	return this->moviesRelated;
 }
 

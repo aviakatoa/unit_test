@@ -7,10 +7,11 @@
 
 #ifndef MOVIE_H_
 #define MOVIE_H_
+
 class Expert;
 #include<string>
 #include<list>
-#include "Comperator.h"
+#include "Comparator.h"
 class Comperator;
 using namespace std;
 
@@ -24,11 +25,15 @@ class Movie {
 		string brief;
 		list<string> genres;
 		list<Expert*> Experts;
-		Comperator* comperator;
+		Comparator* comparator;
 
 
 	public:
 
+		/***********
+		 * Ctor
+		 */
+		Movie():Movie("undefined", "undefined", 0, 0, 0, "undefined"){}
 		/*************
 		 * Movie- constructor
 		 */
@@ -58,10 +63,10 @@ class Movie {
 		/*************
 		* setSort
 		*
-		* the method gets a comperator, and sort the pros
+		* the method gets a comparator, and sort the pros
 		* list with the wanted method
 		**************/
-		void setSort(Comperator* comperator);
+		void setSort(Comparator* comparator);
 
 		/*************
 		* printPros
