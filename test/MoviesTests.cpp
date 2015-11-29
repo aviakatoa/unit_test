@@ -95,5 +95,10 @@ TEST_F(MoviesTests, SortTesting){
 	EXPECT_EQ(m.getPros().front()->getID(), e2->getID());
 }
 
-
+// adding existing expert
+TEST_F(MoviesTests, AddingExistingExpert){
+	int prevNum= this->m1.getPros().size();
+	this->m1.addExpert(e);
+	EXPECT_EQ(this->m1.getPros().size(), prevNum);
+}
 

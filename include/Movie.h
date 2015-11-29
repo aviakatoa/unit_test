@@ -24,7 +24,7 @@ class Movie {
 		string name;
 		double length;
 		int year;
-		int rate;
+		double rate;
 		string brief;
 		list<string> genres;
 		list<Expert*> Experts;
@@ -40,7 +40,7 @@ class Movie {
 		/*************
 		 * Movie- constructor
 		 */
-		Movie(string code, string name, double length, int year, int rate, string brief);
+		Movie(string code, string name, double length, int year, double rate, string brief);
 
 		/*************
 		 * Movie- destructor
@@ -148,7 +148,7 @@ class Movie {
 		 *
 		 * the method returns the rate of the movie
 		 */
-		int getRate();
+		double getRate();
 
 		/*********
 		 * printMe

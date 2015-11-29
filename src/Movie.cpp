@@ -10,6 +10,7 @@
 
 #include "Movie.h"
 #include<iostream>
+#include <set>
 
 /**********
 * Movie- default constructor
@@ -29,7 +30,7 @@ Movie::Movie(){
 /**********
 * Movie- constructor
 */
-Movie::Movie(string code, string name, double length, int year, int rate, string b){
+Movie::Movie(string code, string name, double length, int year, double rate, string b){
 	this->brief= b;
 	this->code=code;
 	this->length=length;
@@ -107,9 +108,25 @@ void Movie::printPros(){
 * creating a new movie
 */
 Movie Movie::operator+(Movie& another){
-	if(another.getLength()>this->length)
-	Movie& biggest=
-	return Movie("code", "movie", 65, 2015, 5, "brief");
+	Movie& bigger;
+	Movie& smaller;
+	if(another.getLength()<this->length){
+		bigger= this;
+		smaller= another;
+	} else{
+		bigger= another;
+		smaller= this;
+	}
+	double length= bigger.getLength();
+	string code= bigger.getCode()+ smaller.getCode();
+	string name= bigger.getName();
+	int year= bigger.getYear();
+	double rate= bigger.getRate();
+	string brief= bigger.getBrief();
+	Movie newMovie= Movie(code, name, length, year,rate, brief);
+	// combining the two pros lists into one
+	list<Expert> pros= newMovie.getPros();
+
 }
 
 /***********
@@ -180,7 +197,7 @@ int Movie::getYear(){
  *
  * the method returns the rate of the movie
  */
-int Movie::getRate(){
+double Movie::getRate(){
 	return this->rate;
 }
 

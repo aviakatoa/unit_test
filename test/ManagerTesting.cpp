@@ -25,19 +25,23 @@ protected:
 
 	}
 	virtual void TearDown(){
-		delete(expert);
+
 	}
 
 public:
 	ManagerTesting(){
 		this->expert = new Actor("Danny", 24, "main actor", 11223344, female);
 	}
+
+	~ManagerTesting(){
+		delete(this->expert);
+	}
 };
 
 // creating a new expert
 TEST_F(ManagerTesting, CreatingExpert){
 	int prevNum= this->manager.getExperts().size();
-	this->manager.createExpert();
+	this->manager.createExpert(123465, 4, "", female, "avia");
 	int currentNum= this->manager.getExperts().size();
 	ASSERT_EQ(prevNum+1, currentNum);
 }

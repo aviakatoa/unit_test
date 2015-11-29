@@ -33,6 +33,8 @@ Actor::~Actor() {
  * the method returns the details of the actor
  */
 string Actor::toString(){
-	return this->name+""+this->age;
+	std::stringstream sstm;
+	sstm<<this->name<<" "<<this->age;
+	return sstm.str();
 }
 
