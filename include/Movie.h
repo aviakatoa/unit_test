@@ -1,9 +1,12 @@
-/*
- * Movie.h
- *
- *  Created on: Nov 11, 2015
- *      Author: avia
- */
+/****************************************
+
+* Student Name:  Avia Katoa
+
+* Exercise Name:  exc2
+
+* File description:  represents a movie
+
+****************************************/
 
 #ifndef MOVIE_H_
 #define MOVIE_H_
@@ -33,7 +36,7 @@ class Movie {
 		/***********
 		 * Ctor
 		 */
-		Movie():Movie("undefined", "undefined", 0, 0, 0, "undefined"){}
+		Movie();
 		/*************
 		 * Movie- constructor
 		 */
@@ -58,7 +61,7 @@ class Movie {
 		* the method gets a reference to an expert and adds him
 		* to the movie's experts list
 		**************/
-		void addExpert(const Expert* newPro);
+		void addExpert(Expert* newPro);
 
 		/*************
 		* setSort
@@ -77,20 +80,12 @@ class Movie {
 		void printPros();
 
 		/*************
-		* printMe
-		*
-		* the method prints all the movie
-		* details
-		**************/
-		void printMe();
-
-		/*************
 		* operator+
 		*
 		* the method defines combining the movie
 		* with another given movie, and returns a new movie
 		**************/
-		Movie operator+(const Movie& anotherMovie);
+		Movie operator+(Movie& anotherMovie);
 
 		/*************
 		* removePro
@@ -154,6 +149,20 @@ class Movie {
 		 * the method returns the rate of the movie
 		 */
 		int getRate();
+
+		/*********
+		 * printMe
+		 *
+		 * the method prints the movie's details
+		 */
+		string printMe();
+
+		/**********
+		 * getCode
+		 *
+		 * the method returns the code of the movie
+		 */
+		string getCode();
 };
 
 #endif /* MOVIE_H_ */

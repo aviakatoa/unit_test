@@ -1,14 +1,17 @@
-/*
- * ComparationTests.cpp
+/****************************************
 
- *
- *  Created on: Nov 22, 2015
- *      Author: avia
- */
+* Student Name:  Avia Katoa
+
+* Exercise Name:  exc2
+
+* File description:  checks the comparation classes
+
+****************************************/
+
 
 #include "Comparator.h"
 #include "Expert.h"
-# include "gtest/gtest.h"
+# include "gtest.h"
 #include "CompareByAge.h"
 #include "CompareByMovies.h"
 #include "Actor.h"
@@ -32,10 +35,10 @@ protected:
 	}
 public:
 	ComparationTests(){
-
 	}
 };
 
+// checks comparation by age
 TEST_F(ComparationTests, compareByAge){
 	e1 = new Actor("name", 45, "desc", 123456, male);
 	e2 = new Producer("name2", 25, "hello", 4567, female);
@@ -43,6 +46,7 @@ TEST_F(ComparationTests, compareByAge){
 	EXPECT_EQ(1, result);
 }
 
+// checks comparations by number of movies
 TEST_F(ComparationTests, compareByMovie){
 	e1 = new Actor("name", 45, "desc", 123456, male);
 	e2 = new Producer("name2", 25, "hello", 4567, female);
@@ -52,6 +56,7 @@ TEST_F(ComparationTests, compareByMovie){
 	EXPECT_EQ(result, 0);
 }
 
+// checks comparation by ID
 TEST_F(ComparationTests, compareByID){
 	e1 = new Actor("name", 45, "desc", 123456, male);
 	e2 = new Producer("name2", 25, "hello", 4567, female);

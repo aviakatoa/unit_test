@@ -1,11 +1,16 @@
-/*
- * Actor.cpp
- *
- *  Created on: Nov 12, 2015
- *      Author: avia
- */
 
-#include "../include/Actor.h"
+/****************************************
+
+* Student Name:  Avia Katoa
+
+* Exercise Name:  exc2
+
+* File description:  represents an Actor
+
+****************************************/
+
+
+#include "Actor.h"
 /************
  * Actor- constructor
  */
@@ -28,6 +33,6 @@ Actor::~Actor() {
  * the method returns the details of the actor
  */
 string Actor::toString(){
-	return "";
+	return this->name+""+this->age;
 }
 

@@ -1,13 +1,16 @@
-/*
- * ManagerTesting.cpp
- *
- *  Created on: Nov 18, 2015
- *      Author: avia
- */
+/****************************************
+
+* Student Name:  Avia Katoa
+
+* Exercise Name:  exc2
+
+* File description:  checks the Manager class
+
+****************************************/
 
 #ifndef TEST_MANAGERTESTING_CPP_
 #define TEST_MANAGERTESTING_CPP_
-# include "gtest/gtest.h"
+# include "gtest.h"
 #include "Manager.h"
 #include "Expert.h"
 #include "Actor.h"
@@ -31,6 +34,7 @@ public:
 	}
 };
 
+// creating a new expert
 TEST_F(ManagerTesting, CreatingExpert){
 	int prevNum= this->manager.getExperts().size();
 	this->manager.createExpert();
@@ -38,6 +42,7 @@ TEST_F(ManagerTesting, CreatingExpert){
 	ASSERT_EQ(prevNum+1, currentNum);
 }
 
+// creating a new movie
 TEST_F(ManagerTesting, CreatingMovie){
 	int prevNum= this->manager.getMovies().size();
 	this->manager.createMovie();
@@ -45,13 +50,19 @@ TEST_F(ManagerTesting, CreatingMovie){
 	ASSERT_EQ(prevNum+1, currentNum);
 }
 
+// removing a pro
 TEST_F(ManagerTesting, RemovingPro){
 	int numOfPros= this->manager.getExperts().size();
 	this->manager.removePro();
 	EXPECT_NE(numOfPros, manager.getExperts().size());
 }
 
-
+// removing a movie
+TEST_F(ManagerTesting, RemovingMovie){
+	int numOfMovies= this->manager.getMovies().size();
+	this->manager.removeMovie();
+	EXPECT_NE(numOfMovies, manager.getMovies().size());
+}
 
 
 #endif /* TEST_MANAGERTESTING_CPP_ */

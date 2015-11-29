@@ -1,17 +1,21 @@
-/*
- * Manager.h
- *
- *  Created on: Nov 11, 2015
- *      Author: avia
- */
+/****************************************
+
+* Student Name:  Avia Katoa
+
+* Exercise Name:  exc2
+
+* File description:  represents a manager
+
+****************************************/
 
 #ifndef MANAGER_H_
 #define MANAGER_H_
 #include <string>
 #include "list"
 #include "Movie.h"
-
+#include "Expert.h"
 using namespace std;
+
 
 class Manager {
 	private:
@@ -43,7 +47,7 @@ class Manager {
 		* from the user and creates a new pro
 		* then, adds him to the list of pros
 		*************/
-		void createExpert();
+		void createExpert(int id, int age, string specifec_desc, Gender gender, string name);
 
 		/************
 		* createMovie
@@ -151,7 +155,19 @@ class Manager {
 		* pros list
 		***************/
 		void removePro();
+
+		/***************
+		* getExperts
+		*
+		* the method returns the experts list
+		*/
 		const list<Expert*>& getExperts() const;
+
+		/**************
+		* getMovies
+		*
+		* the method returns the movies' list
+		*/
 		const list<Movie*>& getMovies() const;
 };
 

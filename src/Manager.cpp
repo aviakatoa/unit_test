@@ -1,24 +1,25 @@
-/*
- * Manager.cpp
- *
- *  Created on: Nov 11, 2015
- *      Author: avia
- */
+/****************************************
 
-#include "../include/Manager.h"
+* Student Name:  Avia Katoa
+
+* Exercise Name:  exc2
+
+* File description:  represents a manager
+
+****************************************/
+
+#include "Manager.h"
 
 		/**********
 		 * Manager- constructor
 		 */
 		Manager::Manager() {
-
 		}
 
 		/*********
 		 * Manager- destructor
 		 */
 		Manager::~Manager() {
-			// TODO Auto-generated destructor stub
 		}
 
 		/********
@@ -35,7 +36,7 @@
 		 * the method gets an expert details from the user
 		 * and adds him to the list
 		 */
-		void Manager::createExpert(){
+		void Manager::createExpert(int id, int age, string specifec_desc, Gender gender, string name){
 
 		}
 
@@ -55,7 +56,6 @@
 		 * the method adds an expert to a movie
 		 */
 		void Manager::addExpert(){
-
 		}
 
 		/********
@@ -128,22 +128,49 @@
 		 * the method prints the pros of a movie
 		 */
 		void Manager::printProsOfMovie(){
-
 		}
+
+		/***********
+		* removeMovie
+		*
+		* the method removes a movie from the movies' list
+		*/
 		void Manager::removeMovie(){
 
 		}
+
+		/*********
+		* removeProFromMovie
+		*
+		* the method removes a pro from a specefic movie
+		*/
 		void Manager::removeProFromMovie(){
 
 		}
+
+		/**********
+		* removePro
+		*
+		* the method removes a specific pro from the pros' list
+		*/
 		void Manager::removePro(){
 
 		}
 
+		/**********
+		* getExperts
+		*
+		* the method retruns the experts list
+		*/
 		const list<Expert*>& Manager::getExperts() const {
 			return experts;
 		}
 
+		/***********
+		* getMovies
+		*
+		* the method returns the movies' list
+		*/
 		const list<Movie*>& Manager::getMovies() const {
 			return movies;
 		}

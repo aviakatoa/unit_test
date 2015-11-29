@@ -1,9 +1,13 @@
-/*
- * Comperator.h
- *
- *  Created on: Nov 13, 2015
- *      Author: avia
- */
+/****************************************
+
+* Student Name:  Avia Katoa
+
+* Exercise Name:  exc2
+
+* File description:  represents a comparator
+
+****************************************/
+
 
 #ifndef COMPERATOR_H_
 #define COMPERATOR_H_
@@ -13,9 +17,22 @@ using namespace std;
 
 class Comparator {
 public:
+	/************
+	 * Comparator- constructor
+	 */
 	Comparator();
+
+	/*********
+	* Comparator- destructor
+	*/
 	virtual ~Comparator();
-	virtual int compare( const Expert* first, const Expert* second);
+
+	/*********
+	* compare
+	*
+	* the method compares between two experts
+	***/
+	virtual int compare(Expert* first, Expert* second);
 };
 
 #endif /* COMPERATOR_H_ */

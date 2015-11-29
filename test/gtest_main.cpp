@@ -5,8 +5,8 @@
  */
 
 #include <stdio.h>
-#include "MovieTests.cpp"
-#include "gtest/gtest.h"
+
+#include "gtest.h"
 
 GTEST_API_ int main(int argc, char **argv) {
   printf("Running main() from gtest_main.cc\n");

@@ -1,19 +1,35 @@
-/*
- * Movie.cpp
- *
- *  Created on: Nov 11, 2015
- *      Author: avia
- */
+/****************************************
 
-#include "../include/Movie.h"
+* Student Name:  Avia Katoa
+
+* Exercise Name:  exc2
+
+* File description:  represents a movie
+
+****************************************/
+
+#include "Movie.h"
 #include<iostream>
 
+/**********
+* Movie- default constructor
+*/
+Movie::Movie(){
+	this->brief= "u";
+	this->code="u";
+	this->length=0;
+	this->name= "u";
+	this->rate=0;
+	this->year=0;
+	this->genres= list<string>();
+	this->comparator= new Comparator();
+	this->Experts= list<Expert*>();
+}
 
+/**********
+* Movie- constructor
+*/
 Movie::Movie(string code, string name, double length, int year, int rate, string b){
-	// TODO Auto-generated constructor stub
-
-	std::cout<<"Movie Ctor "<<std::endl;
-
 	this->brief= b;
 	this->code=code;
 	this->length=length;
@@ -26,54 +42,126 @@ Movie::Movie(string code, string name, double length, int year, int rate, string
 
 }
 
+/**********
+*Movie- destructor
+*/
 Movie::~Movie() {
-	std::cout<<"Movie Dtorss called"<<std::endl;
-	// TODO Auto-generated destructor stub
+
 }
 
+/***********
+*addGenre
+*
+* the method adds a given genre to the genres list
+*/
 void Movie::addGenre(string genre){
-
+	this->genres.push_front(genre);
 }
 
+/**********
+* getGenresNum
+*
+* the method returns the number of genres
+*/
 int Movie::getGenresNum(){
 	return this->genres.size();
 }
 
-void Movie::addExpert(const Expert* newPro){
-
+/***********
+* addExpert
+*
+* the method gets a new Pro and adds it to the list
+*/
+void Movie::addExpert(Expert* newPro){
+	this->Experts.push_front(newPro);
+	newPro->hired(this);
 }
+
+/***********
+* setSort
+*
+* the method gets a comparator and sets it to the movie
+*/
 void Movie::setSort(Comparator* comparator){
 	this->comparator=comparator;
 }
+
+/************
+*printPros
+*
+* the methos prints all pros of the movie
+*/ 
 void Movie::printPros(){
+	list<Expert*>& pros= this->Experts;
+	list<Expert*>::iterator iter = pros.iterator;
 
+	for(iter=pros.begin(); iter!=pros.end(); ++iter){
+		cout<<(*iter)->toString();
+	}
 }
-void Movie::printMe(){
 
-}
-Movie Movie::operator+(const Movie& another){
+/************
+* operator+
+*
+* the method gets a movie and adds this movie to the other
+* creating a new movie
+*/
+Movie Movie::operator+(Movie& another){
+	if(another.getLength()>this->length)
+	Movie& biggest=
 	return Movie("code", "movie", 65, 2015, 5, "brief");
 }
+
+/***********
+* removePro
+*
+* the method removes a pro
+*/
 void Movie::removePro(int ID){
 
 }
 
+/***********
+* getLength
+*
+* the method returns the length of the movie
+*/
 double Movie::getLength(){
 	return this->length;
 }
 
+/**********
+* getPros
+*
+* the method returns the pros' list
+*/
 list<Expert*> Movie::getPros(){
 	return this->Experts;
 }
 
+/***********
+* getGenres
+*
+* the method returns the genres list
+*/
 list<string> Movie::getGenres(){
 	return this->genres;
 }
 
+/***********
+* getBrief
+*
+* the method returns the brief
+*/
 string Movie::getBrief(){
 	return this->brief;
 }
 
+/**********
+* getName
+*
+* the merthod returns the name of the movie
+*/
 string Movie::getName(){
 	return this->name;
 }
@@ -94,4 +182,23 @@ int Movie::getYear(){
  */
 int Movie::getRate(){
 	return this->rate;
+}
+
+
+/********
+ * printMe
+ *
+ * the method prints the movie's details
+ */
+string Movie::printMe(){
+	return"";
+}
+
+/**********
+ * getCode
+ *
+ * the method returns the code of the movie
+ */
+string Movie::getCode(){
+	return this->code;
 }

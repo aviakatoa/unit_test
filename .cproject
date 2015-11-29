@@ -68,11 +68,12 @@
 					</folderInfo>
 					<folderInfo id="cdt.managedbuild.config.gnu.cross.exe.debug.760575195.988221050" name="/" resourcePath="gtest_src">
 						<toolChain id="cdt.managedbuild.toolchain.gnu.cross.exe.debug.831646467" name="Cross GCC" superClass="cdt.managedbuild.toolchain.gnu.cross.exe.debug" unusedChildren="">
+							<targetPlatform archList="all" binaryParser="org.eclipse.cdt.core.ELF" id="cdt.managedbuild.targetPlatform.gnu.cross" isAbstract="false" osList="all" superClass="cdt.managedbuild.targetPlatform.gnu.cross"/>
 							<tool id="cdt.managedbuild.tool.gnu.cross.c.compiler.1958125735" name="Cross GCC Compiler" superClass="cdt.managedbuild.tool.gnu.cross.c.compiler.1432668794">
 								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.1053995814" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
 							</tool>
 							<tool id="cdt.managedbuild.tool.gnu.cross.cpp.compiler.577569373" name="Cross G++ Compiler" superClass="cdt.managedbuild.tool.gnu.cross.cpp.compiler.248146646">
-								<option id="gnu.cpp.compiler.option.include.paths.626311491" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
+								<option id="gnu.cpp.compiler.option.include.paths.626311491" name="Include paths (-I)" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
 									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/gtest_src}&quot;"/>
 								</option>
 								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1716676895" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
@@ -82,6 +83,25 @@
 							<tool id="cdt.managedbuild.tool.gnu.cross.archiver.670940502" name="Cross GCC Archiver" superClass="cdt.managedbuild.tool.gnu.cross.archiver.1329249704"/>
 							<tool id="cdt.managedbuild.tool.gnu.cross.assembler.607243428" name="Cross GCC Assembler" superClass="cdt.managedbuild.tool.gnu.cross.assembler.1436367108">
 								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.592346832" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
+							</tool>
+						</toolChain>
+					</folderInfo>
+					<folderInfo id="cdt.managedbuild.config.gnu.cross.exe.debug.760575195.1520600787" name="/" resourcePath="src">
+						<toolChain id="cdt.managedbuild.toolchain.gnu.cross.exe.debug.1918626567" name="Cross GCC" superClass="cdt.managedbuild.toolchain.gnu.cross.exe.debug" unusedChildren="">
+							<tool id="cdt.managedbuild.tool.gnu.cross.c.compiler.219647758" name="Cross GCC Compiler" superClass="cdt.managedbuild.tool.gnu.cross.c.compiler.1432668794">
+								<inputType id="cdt.managedbuild.tool.gnu.c.compiler.input.84045846" superClass="cdt.managedbuild.tool.gnu.c.compiler.input"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.cross.cpp.compiler.1582551784" name="Cross G++ Compiler" superClass="cdt.managedbuild.tool.gnu.cross.cpp.compiler.248146646">
+								<option id="gnu.cpp.compiler.option.include.paths.1998093565" superClass="gnu.cpp.compiler.option.include.paths" valueType="includePath">
+									<listOptionValue builtIn="false" value="&quot;${workspace_loc:/${ProjName}/include}&quot;"/>
+								</option>
+								<inputType id="cdt.managedbuild.tool.gnu.cpp.compiler.input.1559055" superClass="cdt.managedbuild.tool.gnu.cpp.compiler.input"/>
+							</tool>
+							<tool id="cdt.managedbuild.tool.gnu.cross.c.linker.1378530431" name="Cross GCC Linker" superClass="cdt.managedbuild.tool.gnu.cross.c.linker.2106116029"/>
+							<tool id="cdt.managedbuild.tool.gnu.cross.cpp.linker.519404595" name="Cross G++ Linker" superClass="cdt.managedbuild.tool.gnu.cross.cpp.linker.537598989"/>
+							<tool id="cdt.managedbuild.tool.gnu.cross.archiver.1842078471" name="Cross GCC Archiver" superClass="cdt.managedbuild.tool.gnu.cross.archiver.1329249704"/>
+							<tool id="cdt.managedbuild.tool.gnu.cross.assembler.884117877" name="Cross GCC Assembler" superClass="cdt.managedbuild.tool.gnu.cross.assembler.1436367108">
+								<inputType id="cdt.managedbuild.tool.gnu.assembler.input.1915008939" superClass="cdt.managedbuild.tool.gnu.assembler.input"/>
 							</tool>
 						</toolChain>
 					</folderInfo>
@@ -154,4 +174,5 @@
 		</scannerConfigBuildInfo>
 	</storageModule>
 	<storageModule moduleId="org.eclipse.cdt.core.LanguageSettingsProviders"/>
+	<storageModule moduleId="refreshScope"/>
 </cproject>

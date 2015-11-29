@@ -1,25 +1,35 @@
-/*
- * Comparator.cpp
- *
- *  Created on: Nov 13, 2015
- *      Author: avia
- */
+/****************************************
 
-#include "../include/Comparator.h"
+* Student Name:  Avia Katoa
+
+* Exercise Name:  exc2
+
+* File description:  represents a Comparator
+
+****************************************/
+
+
+#include "Comparator.h"
 
 /************
  * Comparator- constructor
  */
 Comparator::Comparator() {
-	// TODO Auto-generated constructor stub
 
 }
 
+/*********
+* Comparator- destructor
+*/
 Comparator::~Comparator() {
-	// TODO Auto-generated destructor stub
 }
 
-int Comparator::compare(const Expert* first, const Expert* second){
-	return 0;
+/*********
+* compare
+*
+* the method compares between two experts
+***/
+int Comparator::compare(Expert* first, Expert* second){
+	return (first->getID() > second->getID());
 }
 

@@ -1,9 +1,12 @@
-/*
- * CompareByAge.h
- *
- *  Created on: Nov 13, 2015
- *      Author: avia
- */
+/****************************************
+
+* Student Name:  Avia Katoa
+
+* Exercise Name:  exc2
+
+* File description:  represents a comparator by age
+
+****************************************/
 
 #ifndef COMPAREBYAGE_H_
 #define COMPAREBYAGE_H_
@@ -13,9 +16,25 @@
 
 class CompareByAge: public Comparator {
 public:
+
+	/***********
+	 * CompareByAge- constructor
+	 *
+	 */
 	CompareByAge();
+
+	/***********
+	 * CompareByAge- destructor
+	 */
 	virtual ~CompareByAge();
-	int compare(const Expert* first, const Expert* second);
+
+	/**********
+	 * compare
+	 *
+	 * the method compares by age and returns 1 if the first expert is
+	 * bigger than the second, and 0 otherwise
+	 */
+	int compare(Expert* first, Expert* second);
 };
 
 #endif /* COMPAREBYAGE_H_ */

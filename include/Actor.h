@@ -1,9 +1,13 @@
-/*
- * Actor.h
- *
- *  Created on: Nov 12, 2015
- *      Author: avia
- */
+/****************************************
+
+* Student Name:  Avia Katoa
+
+* Exercise Name:  exc2
+
+* File description:  represents an Actor
+
+****************************************/
+
 
 #ifndef ACTOR_H_
 #define ACTOR_H_
@@ -14,8 +18,21 @@ using namespace std;
 
 class Actor: public Expert {
 public:
+	/*************
+	*Actor- constructor
+	**********/
 	Actor(string name, int age, string jobDesc, int ID, Gender gender);
+	
+	/*************
+	* Actor- destructor
+	*******/
 	virtual ~Actor();
+
+	/************
+	* toString
+	*
+	* the function returns a string of the actor's details
+	*******/
 	string toString();
 };
 

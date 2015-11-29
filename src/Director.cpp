@@ -1,23 +1,34 @@
-/*
- * Director.cpp
- *
- *  Created on: Nov 13, 2015
- *      Author: avia
- */
+/****************************************
 
-#include "../include/Director.h"
+* Student Name:  Avia Katoa
 
+* Exercise Name:  exc2
+
+* File description:  represents a Director
+
+****************************************/
+
+#include "Director.h"
+
+/**********
+* Director- constructor
+*/
 Director::Director(string name, int age, string jobDesc, int ID, Gender gender):
 	Expert(name, age, jobDesc, ID, gender){
-	// TODO Auto-generated constructor stub
-
 }
 
+/*********
+* Director- destructor
+*/
 Director::~Director() {
-	// TODO Auto-generated destructor stub
 }
 
+/********
+* toString
+*
+* the method returns the string of the director's details
+*/
 string Director::toString(){
-	return "";
+	return this->name;
 }
 

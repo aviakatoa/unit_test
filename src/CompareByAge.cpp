@@ -1,25 +1,26 @@
-/*
- * CompareByAge.cpp
- *
- *  Created on: Nov 13, 2015
- *      Author: avia
- */
+/****************************************
 
-#include "../include/CompareByAge.h"
+* Student Name:  Avia Katoa
+
+* Exercise Name:  exc2
+
+* File description:  represents a comparator by age
+
+****************************************/
+
+#include "CompareByAge.h"
 
 /***********
  * CompareByAge- constructor
  *
  */
 CompareByAge::CompareByAge() {
-	// TODO Auto-generated constructor stub
 }
 
 /***********
  * CompareByAge- destructor
  */
 CompareByAge::~CompareByAge() {
-	// TODO Auto-generated destructor stub
 }
 
 /**********
@@ -28,7 +29,7 @@ CompareByAge::~CompareByAge() {
  * the method compares by age and returns 1 if the first expert is
  * bigger than the second, and 0 otherwise
  */
-int CompareByAge::compare(const Expert* first, const Expert* second){
-	return 0;
+int CompareByAge::compare(Expert* first, Expert* second){
+	return (first->getAge() > second->getAge());
 }
 
